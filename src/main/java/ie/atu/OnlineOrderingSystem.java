@@ -3,7 +3,6 @@ package ie.atu;
 import java.util.Scanner;
 
 public class OnlineOrderingSystem {
-    MenuItem menuItem=null;
     public static void main(String[] args) {
     // array list for MenuItem objects
         MenuItem[] menuItems=new MenuItem[]{
@@ -24,25 +23,17 @@ public class OnlineOrderingSystem {
     //Displaying details
         for(MenuItem menuItem: menuItems){
             //printing out the name, description and ingredients for each item
-            System.out.println("Name: "+ menuItem.getName() +"\n");
-            System.out.println("Description: "+ menuItem.getDescription() +"\n");
-            System.out.println("Price: "+ menuItem.getPrice() +"\n");
-
-            System.out.println("Name: "+ menuItem.getName() +"\n");
-            System.out.println("Description: "+ menuItem.getDescription() +"\n");
-            System.out.println("Price: "+ menuItem.getPrice() +"\n");
-
-            System.out.println("Name: "+ menuItem.getName() +"\n");
-            System.out.println("Description: "+ menuItem.getDescription() +"\n");
-            System.out.println("Price: "+ menuItem.getPrice() +"\n");
+            System.out.println("\nName: "+ menuItem.getName());
+            System.out.println("Description: "+ menuItem.getDescription());
+            System.out.println("Price: "+ menuItem.getPrice());
         }
 
     //Calculate and disp. total cost of order
         double totalCost = 0;
         for(MenuItem menuItem : menuItems){
             //Total cost of menu item prices in an order
-
+            totalCost+=menuItem.getPrice();
         }
-        System.out.println("Total Cost: €"+totalCost);
+        System.out.println(String.format("Total Cost: €%.2f", totalCost));
     }
 }
