@@ -18,6 +18,10 @@ public class OnlineOrderingSystem {
                 //new Salad("Caesar salad",7.99,"Lettuce, Croutons, caesar sauce "),
                 //new Salad("Chicken salad",6.50,"Tomato,onion, olive oil, chilli peppers"),
                 new Salad("Fruit salad",3.99,"Kiwi, Pineapple, pineapple, mixed berries "),
+
+                //new Drink("Fanta",2.99,"Orange Fanta"),
+                //new Drink("7up",2.99,"&up"),
+                new Drink("Coke",2.99,"Coca Cola"),
         };
 
     //Displaying details
