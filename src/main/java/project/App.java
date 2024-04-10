@@ -2,19 +2,20 @@ package project;
 
 import ie.atu.*;
 
+import java.util.ArrayList;
+
 public class App {
     public static void main(String[] args) {
-        // array of Music objects
-        Music[] musicArray = new Music[]{
-                // Music items
-                new Songs("What", "David"),
-                new Songs("racism", "david"),
-                // add more music items here if needed
-        };
+        // ArrayList of Songs objects
+        ArrayList<Songs> musicArray = new ArrayList<>();
+
+        // Music items
+        musicArray.add(new Songs("What", "David"));
+        musicArray.add(new Songs("another song", "david"));
+        // add more music items here if needed
 
         // Displaying details
-        for (Music music : musicArray) {
-            // printing out the name and artist for each music item
+        for (Songs music : musicArray) {
             System.out.println("\nSong Name: " + music.getName());
             System.out.println("Artist: " + music.getArtist());
         }
